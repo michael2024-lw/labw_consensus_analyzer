@@ -38,7 +38,7 @@ if [ "$PRISM_JAVA" = "" ]; then
 fi
 
 # Run PRISM through Java
-"$PRISM_JAVA" -Djava.library.path="$PRISM_LIB_PATH" -classpath "$PRISM_CLASSPATH" $PRISM_MAINCLASS "$@"
+"$PRISM_JAVA" -Djava.library.path="$PRISM_LIB_PATH" -Xmx16g -classpath "$PRISM_CLASSPATH" $PRISM_MAINCLASS "$@"
 
 
 #'classes:../prism:../prism/classes:../prism/lib/*:../prism/prism:../prism/prism/classes:../prism/prism/lib/*' services.impl.CNFModelChecker cnf_simple.yaml false

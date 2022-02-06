@@ -6,9 +6,15 @@ public class ModelCheckResult {
     private Set<int[]> backwardTransitions;
     private double probability;
     private double expectedMessages;
+    private int id;
+    private long epochTimestamp;
 
     public ModelCheckResult(List<String> organizations){
         this.organizations = organizations;
+    }
+
+    public long getEpochTimestamp() {
+        return epochTimestamp;
     }
 
     public double getExpectedMessages() {
@@ -17,6 +23,10 @@ public class ModelCheckResult {
 
     public double getProbability() {
         return probability;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public Set<int[]>  getBackwardTransitions() {
@@ -33,6 +43,14 @@ public class ModelCheckResult {
 
     public void setProbability(double probability) {
         this.probability = probability;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setEpochTimestamp(long epochTimestamp) {
+        this.epochTimestamp = epochTimestamp;
     }
 
     @Override

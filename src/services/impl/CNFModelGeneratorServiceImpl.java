@@ -34,44 +34,13 @@ public class CNFModelGeneratorServiceImpl implements ModelGenerator, RewardGener
     // Current value of x
     private int x;
 
-    public CNFModelGeneratorServiceImpl(CNFModel cnfModel, List<Double> probabilities, Set<int[]> backwards) {
-        this.n = cnfModel.getOrganizations().size();
+    public CNFModelGeneratorServiceImpl(List<int[]> spec, List<Double> probabilities, Set<int[]> backwards) {
+        this.n = probabilities.size();
         this.probabilities = probabilities;
-        this.scpec = getSortedSpecification(cnfModel);
+        this.scpec = spec;
         this.backwards = backwards;
 
         responses = new int[n];
-    }
-
-    // TODO: - convert specification in binary format - not shall go to the literal member
-    private List<int[]> getSortedSpecification(CNFModel cnfModel) {
-        List<int[]> spec = new ArrayList<>();
-        List<String> orgNames = cnfModel.getOrganizations();
-
-        for (LiteralModel literal : cnfModel.getLiterals()) {
-            int[] specLiteral = new int[n];
-            Arrays.fill(specLiteral, 1);
-            List<int[]> temp = new ArrayList<>();
-            temp.add(specLiteral);
-
-            for (int i = 0; i < orgNames.size(); i++) {
-                String name = orgNames.get(i);
-                if (!literal.getLiteralMembers().contains(name)) {
-                    List<int[]> tempClones = new ArrayList<>();
-                    for (int[] t :
-                            temp) {
-                        int[] tClone = t.clone();
-                        tClone[i] = 0;
-                        tempClones.add(tClone);
-                    }
-                temp.addAll(tempClones);
-                }
-            }
-
-            spec.addAll(temp);
-        }
-
-        return spec;
     }
 
     // Methods for ModelInfo interface

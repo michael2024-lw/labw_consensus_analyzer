@@ -8,38 +8,6 @@ import java.util.Set;
 import static java.lang.Math.pow;
 
 public class CombinationsUtils {
-    public List<int[]> getBackwardTransitionsPermutations(int n) {
-        List<int[]> output = new ArrayList<>();
-
-        for (int i = 1; i <= n; i++) {
-
-            for (int j = 0; j < pow(2, n - i); j++) {
-                List<Integer> tempList = new ArrayList<>();
-
-                if (i != n) {
-                    String binary = Integer.toBinaryString(j);
-
-                    for (int k = 0; k < n - i - binary.length(); k++) {
-                        tempList.add(0);
-                    }
-
-                    for (int k = 0; k < binary.length(); k++) {
-                        tempList.add(Character.getNumericValue(binary.charAt(k)));
-                    }
-                }
-
-                for (int k = 0; k < i; k++) {
-                    tempList.add(-1);
-                }
-
-                output.add(tempList.stream().mapToInt(l -> l).toArray());
-            }
-        }
-
-        return output;
-    }
-
-
     public List<Set<int[]>> getBackwardTransitionsCombinations(int n) {
         List<Set<int[]>> output = new ArrayList<>();
         List<int[]> permutations = new ArrayList<>();
