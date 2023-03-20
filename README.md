@@ -32,7 +32,7 @@ Download a copy of PRISM and build it
 Download the ``consensus-analyzer`` repo and build the examples
 
 * ``cd ../..``
-* ``git clone https://github.com/1vanan/consensus-analyzer.git``
+* ``git clone https://github.com/1vanan/prog-autom-consensus-analyzer.git``
 * ``cd consensus-analyzer``
 * ``make``
 
