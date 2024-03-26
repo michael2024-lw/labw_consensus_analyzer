@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class CNFModelGeneratorServiceImpl implements ModelGenerator, RewardGenerator {
+public class CNFModelGeneratorServiceImpl implements ModelGenerator<Double>, RewardGenerator {
     // Size of the tree (state x is in [0,...,n])
     private int n;
     //binary representation of CNF
@@ -128,7 +128,7 @@ public class CNFModelGeneratorServiceImpl implements ModelGenerator, RewardGener
     }
 
     @Override
-    public double getTransitionProbability(int i, int offset) throws PrismException {
+    public Double getTransitionProbability(int i, int offset) throws PrismException {
         // End points have a self-loop (with probability 1)
         // All other states go left with probability 1-p and right with probability p
         // We assume that these are transitions 0 and 1, respectively
@@ -136,7 +136,7 @@ public class CNFModelGeneratorServiceImpl implements ModelGenerator, RewardGener
 
         if (x < n) {
             return offset == 0 ? 1 - probabilities.get(x) : probabilities.get(x);
-        } else return 1;
+        } else return 1D;
     }
 
     @Override
@@ -208,7 +208,7 @@ public class CNFModelGeneratorServiceImpl implements ModelGenerator, RewardGener
     }
 
     @Override
-    public double getStateReward(int r, State state) throws PrismException {
+    public Double getStateReward(int r, State state) throws PrismException {
         // No action rewards
         int[] responsesForReward = new int[n];
         for (int i = 0; i < n; i++) {
@@ -243,7 +243,7 @@ public class CNFModelGeneratorServiceImpl implements ModelGenerator, RewardGener
     }
 
     @Override
-    public double getStateActionReward(int r, State state, Object action) throws PrismException {
+    public Double getStateActionReward(int r, State state, Object action) throws PrismException {
         return 0.0;
     }
 }
