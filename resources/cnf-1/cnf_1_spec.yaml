@@ -1,4 +1,4 @@
 Policies:
   Endorsement:
     Type: Signature
-    Rule: "(Org3 & Org2 & Org1)"
+    Rule: "OutOf(2, Org3, Org2, Org1)"
