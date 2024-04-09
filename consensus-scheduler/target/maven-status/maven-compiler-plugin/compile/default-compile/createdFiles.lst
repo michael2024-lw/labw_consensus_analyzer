@@ -1,0 +1,5 @@
+services/SenderService.class
+repositories/model/ModelCheckResult.class
+services/SendingConfirmationServiceImpl.class
+repositories/model/ModelCheckerResultWrapper.class
+services/SendingConfirmationService.class
