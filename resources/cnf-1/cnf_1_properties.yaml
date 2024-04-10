@@ -16,3 +16,7 @@ Organizations:
 
     # Probability to accept nxt transaction. based on the historical data
     Pr: 0.985
+
+  -
+    Name: Org4
+    Pr: 0.9925
