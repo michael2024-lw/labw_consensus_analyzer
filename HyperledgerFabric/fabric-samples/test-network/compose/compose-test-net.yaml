@@ -154,17 +154,17 @@ services:
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variables
       - CORE_PEER_ID=peer0.org3.example.com
-      - CORE_PEER_ADDRESS=peer0.org3.example.com:7051
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:7051
+      - CORE_PEER_ADDRESS=peer0.org3.example.com:11210
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:11210
       - CORE_PEER_CHAINCODEADDRESS=peer0.org3.example.com:7052
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org3.example.com:7051
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org3.example.com:7051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org3.example.com:11210
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org3.example.com:11210
       - CORE_PEER_LOCALMSPID=Org1MSP
       - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/msp
-      - CORE_OPERATIONS_LISTENADDRESS=peer0.org3.example.com:9444
+      - CORE_OPERATIONS_LISTENADDRESS=peer0.org3.example.com:19444
       - CORE_METRICS_PROVIDER=prometheus
-      - CHAINCODE_AS_A_SERVICE_BUILDER_CONFIG={"peername":"peer0org1"}
+      - CHAINCODE_AS_A_SERVICE_BUILDER_CONFIG={"peername":"peer0org3"}
       - CORE_CHAINCODE_EXECUTETIMEOUT=300s
     volumes:
       - ../organizations/peerOrganizations/org3.example.com/peers/peer0.org3.example.com:/etc/hyperledger/fabric
@@ -172,8 +172,8 @@ services:
     working_dir: /root
     command: peer node start
     ports:
-      - 7051:7051
-      - 9444:9444
+      - 11210:11210
+      - 19444:19444
     networks:
       - test
 
@@ -193,17 +193,17 @@ services:
       - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt
       # Peer specific variables
       - CORE_PEER_ID=peer0.org4.example.com
-      - CORE_PEER_ADDRESS=peer0.org4.example.com:9051
-      - CORE_PEER_LISTENADDRESS=0.0.0.0:9051
+      - CORE_PEER_ADDRESS=peer0.org4.example.com:12110
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:12110
       - CORE_PEER_CHAINCODEADDRESS=peer0.org4.example.com:9052
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:9052
-      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org4.example.com:9051
-      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org4.example.com:9051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org4.example.com:12110
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org4.example.com:12110
       - CORE_PEER_LOCALMSPID=Org2MSP
       - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/msp
-      - CORE_OPERATIONS_LISTENADDRESS=peer0.org4.example.com:9445
+      - CORE_OPERATIONS_LISTENADDRESS=peer0.org4.example.com:14945
       - CORE_METRICS_PROVIDER=prometheus
-      - CHAINCODE_AS_A_SERVICE_BUILDER_CONFIG={"peername":"peer0org2"}
+      - CHAINCODE_AS_A_SERVICE_BUILDER_CONFIG={"peername":"peer0org4"}
       - CORE_CHAINCODE_EXECUTETIMEOUT=300s
     volumes:
       - ../organizations/peerOrganizations/org4.example.com/peers/peer0.org4.example.com:/etc/hyperledger/fabric
@@ -211,7 +211,7 @@ services:
     working_dir: /root
     command: peer node start
     ports:
-      - 9051:9051
-      - 9445:9445
+      - 12110:12110
+      - 14945:14945
     networks:
       - test
