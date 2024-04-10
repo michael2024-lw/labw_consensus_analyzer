@@ -1,14 +1,30 @@
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
-INFO: Send for confirmation to Org1 finished with response false
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
-INFO: Send for confirmation to Org2 finished with response false
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
-INFO: Send for confirmation to Org3 finished with response false
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
 INFO: Send for confirmation to Org1 finished with response true
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
-INFO: Send for confirmation to Org2 finished with response false
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org2 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
 INFO: Send for confirmation to Org3 finished with response true
-Apr 10, 2024 11:13:25 AM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
-INFO: Consensus is reached with 3 messages
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org4 finished with response false
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Consensus is reached with 4 messages
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org1 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org2 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org3 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org4 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Consensus is reached with 4 messages
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org1 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org2 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org3 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Send for confirmation to Org4 finished with response true
+Apr 10, 2024 1:54:35 PM services.SendingConfirmationServiceImpl sendForConfirmationToOrganization
+INFO: Consensus is reached with 4 messages

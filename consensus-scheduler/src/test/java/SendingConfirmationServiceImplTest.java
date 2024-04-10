@@ -61,6 +61,16 @@ public class SendingConfirmationServiceImplTest {
         @Override
         public int getReply(String orgName, int transactionId) {
             // random either accepts or rejects a transaction
+	    switch(orgName) {
+		case "Org1": // 0.995
+		    return (ThreadLocalRandom.current().nextInt(0, 200) == 0 ? 0 : 1);
+		case "Org2": // 0.99
+		    return (ThreadLocalRandom.current().nextInt(0, 100) == 0 ? 0 : 1);
+		case "Org3": // 0.985
+		    return (ThreadLocalRandom.current().nextInt(0, 67) == 0 ? 0 : 1);
+		case "Org4": // 0.9925
+                    return (ThreadLocalRandom.current().nextInt(0, 133) == 0 ? 0 : 1);
+	    }
             return ThreadLocalRandom.current().nextInt(0, 2);
         }
 
