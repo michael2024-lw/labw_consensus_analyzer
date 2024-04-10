@@ -14,6 +14,14 @@ services:
     volumes:
       - ./podman/peercfg:/etc/hyperledger/peercfg
 
+  peer0.org3.example.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
+  peer0.org4.example.com:
+    volumes:
+      - ./podman/peercfg:/etc/hyperledger/peercfg
+
   cli:
     volumes:
       - ./podman/peercfg:/etc/hyperledger/peercfg
